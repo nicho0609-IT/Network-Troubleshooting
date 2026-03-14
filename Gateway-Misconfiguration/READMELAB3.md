@@ -36,7 +36,8 @@ ping 127.0.0.1
 ```
 
 ### Screenshot
-image
+
+![tcpip](Screenshots/pingtcpip.png)
 
 This confirms that the local TCP/IP stack is functioning correctly.
 
@@ -48,7 +49,7 @@ ping 192.168.1.254
 ```
 
 ### Screenshot
-image
+![Gateway](Screenshots/pinggateway.png)
 
  The system cannot reach the configured *"Default Gateway"*, suggesting that gateway may be incorrect.
 
@@ -60,7 +61,7 @@ ping 8.8.8.8
 ```
 
 ### Screenshot
-image
+![Internet](Screenshots/pinginternet.png)
 
 External connectivity fails, indicating that traffic cannot be routed outside.
 
@@ -72,13 +73,14 @@ tracert 8.8.8.8
 ```
 
 ### Screenshot
-image
+![Traceroute](Screenshots/tracert.png)
 
-Trace route fails at the first hop indicating that system cannot reach *Gateway*.
+Trace route fails at the first hop indicating that system cannot reach **Gateway**.
 
 # Diagnosis
 
-Internet adapter appears to be connected, but internet connection fails.  Traceroute fails at the first hope indicating a *Gateway Misconfiguration*. 
+Internet adapter appears to be connected, but internet connection fails.  Traceroute fails at the first hope indicating a **Gateway Misconfiguration**
+8. 
 # Root Cause
 
 The default gateway was incorrectly configured, preventing the system from routing traffic outside the local network.
@@ -90,12 +92,12 @@ The correct default gateway was restored.
 ## Before 
 
 ### Screenshot
-image
+![problem](Screenshots/problem.png)
 
 ## After
 
 ### Screenshot
-image
+![After](Screenshots/After.png)
 
 Correct configuration:
 
@@ -109,7 +111,7 @@ After correcting the configuration, network connectivity was restored.
 ```
 ping 8.8.8.8
 ```
-image
+![Verification](Screenshots/Verification.png)
 
 Now system reach the configured gateway 
 
