@@ -60,33 +60,23 @@ Network connectivity is operational, but DNS resolution is failing due to an inc
 The issue was caused by an incorrect DNS server configuration.
 The system was configured to use the DNS address 8.8.8.9, which is not a valid DNS server. As a result, domain name resolution failed.
 
-# Solution Process 
 
-Knowing that the operating system is Windows 11, follow these steps to solve:
 
-- Control Panel 
-- Network and Internet
-- Network Sharing Center
-- Connections
-- Properties  
-- (TCP / IPv4) 
-- Properties
+# Resolution
 
-## Final Window
-
-### Screenshot 
+### Before
 ![Problem](Screenshots/problem.png)
 
 As we can see, the "Preferred DNS server" is configured with the IP address 8.8.8.9, which is not a valid DNS server.
 
-# 1. Step Solution 
+### After
 
 Change 8.8.8.9 to the option "Obtain DNS server address automatically"
 
 ### Screenshot
 ![solution](Screenshots/solution.png)
 
-# Confirmation 
+# Verification 
 
 ### screenshot 
 ![confirmation](Screenshots/confirmation.png)
